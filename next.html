@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Future Date? </title>
+    <link rel="stylesheet" href="css2.css">
+</head>
+
+<body>
+    <div class="envelope-container">
+
+
+        <div class="letter">
+
+            <h2>Date Plan </h2>
+
+            <label for="datePick">Date</label>
+            <input type="date" id="datePick">
+
+            <label for="timePick">Time</label>
+            <input type="time" id="timePick">
+
+            <label for="placePick">Place</label>
+            <select id="placePick">
+                <option value="">Select a place...</option>
+                <option value="Coffee">☕ Coffee Date</option>
+                <option value="Arcade">🎮 Arcade Date</option>
+                <option value="Beach">🌊 Beach Date</option>
+                <option value="Movie">🎥 Movie Date</option>
+                <option value="Stroll">📷 Stroll Date</option>
+            </select>
+
+            <button class="btn" onclick="copyDateInfo()">
+                Copy Date Details 
+            </button>
+            <div id="preview" class="preview-box">
+            </div>
+        </div>
+
+
+    </div>
+
+    </div>
+
+    <script>
+        function copyDateInfo() {
+
+            const date = document.getElementById("datePick").value;
+            const time = document.getElementById("timePick").value;
+            const place = document.getElementById("placePick").value;
+
+            if (!date || !time || !place) {
+                alert("Please fill in the Date, Time, and Place first");
+                return;
+            }
+
+            const invitation =
+                `💕 Date Invitation 💕
+
+            📅 Date: ${date}
+            ⏰ Time: ${time}
+            📍 Place: ${place}
+
+See you there ❤️`;
+
+            navigator.clipboard.writeText(invitation)
+                .then(() => {
+                    alert("Date details copied to clipboard! 💌");
+                })
+                .catch(() => {
+                    alert("Could not copy the details.");
+                });
+        }
+    </script>
+
+    </div>
+
+</body>
+
+</html>

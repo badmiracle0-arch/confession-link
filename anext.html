@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>For Vann </title>
+    <link rel="stylesheet" href="css.css">
+
+
+</head>
+
+<body>
+
+    <div class="envelope-container" onclick="openLetter()">
+
+        <div class="envelope">
+
+            <div class="letter">
+                <div class="content">
+
+                    <h2>Decision</h2>
+
+                    <p>
+                        I know this is a lot to take in, and I understand po if you need time to process everything.
+                        I just want you to know that my feelings for you are genuine, and I care about you deeply.
+                        Whatever your decision may be, I'm gonna respect it.
+                        Thank you for taking the time to read this letter Take care, Vann.
+                        ---------------------------------------------------------------------------------------------------
+                        Ayaw lng sa e click ang continue Vann if dikapa po naka decide kay date plan lng manyan HAHAHAHAHAHAHA
+                    
+
+
+                    </p>
+
+                    <div class="next-container">
+                        <button onclick="window.location.href='next.html'">
+                            Continue
+                        </button>
+                    </div>
+
+                </div>
+            </div>
+
+            <div class="back"></div>
+            <div class="flap"></div>
+            <div class="front"></div>
+
+        </div>
+
+        <div class="click-text">
+            💌 Click the envelope
+        </div>
+
+
+    </div>
+
+    <script>
+        function openLetter() {
+            document.querySelector('.envelope-container')
+                .classList.toggle('open');
+        }
+    </script>
+
+</body>
+
+
+</html>
